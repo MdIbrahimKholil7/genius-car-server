@@ -107,6 +107,9 @@ run().catch(console.dir)
 app.get('/', (req, res) => {
     res.send('server is running')
 })
+app.get('/hero',(req,res)=>{
+    res.send('Heroku update')
+})
 app.listen(port, () => {
     console.log('Port is running', port)
 })
