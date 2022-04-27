@@ -17,7 +17,7 @@ function verifyJWT(req, res, next) {
         return 
     }
     const token=header.split(' ')[1]
-    jwt.verify(token,process.env.ACCESS_TOKEN,(error,decode)=>{
+    jwt.verify(token,`83913d4526521975b7ea246c7ffc3ca03d7a6e614bdfcfe9f24b545b68553453168a4194b12fe2b70dc1dd31972d2027f2b31b0324da06399f0be322ea5d4ce0`,(error,decode)=>{
         if(error){
             console.log('403 from verify jwt')
            return res.status(403).send({message:'forbidden access'})
